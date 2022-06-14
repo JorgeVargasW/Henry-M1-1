@@ -17,13 +17,12 @@ function BinarioADecimal(num) {
 
 function DecimalABinario(num) {
   // tu codigo aca
-  let binario = '';
-	let newNum = num;
-	while (newNum > 0) {
-		binario += newNum % 2;
-		newNum = Math.floor(newNum / 2);
-	}
-	return binario.split('').reverse().join('');
+  var binary = [];
+  while(num / 2 !== 0){
+	binary.unshift(num % 2);
+	num = Math.floor(num / 2);
+  }
+  return binary.join("");
 }
 
 
